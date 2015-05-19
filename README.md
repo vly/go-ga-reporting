@@ -26,26 +26,28 @@ import (
 
 func main() {
 	// initialise GAData
-    gaTest := new(GAData)
+	gaTest := new(gadata.GAData)
 	
-		// initialise instance incl. authentication
-    gaTest.Init()
+	// initialise instance incl. authentication
+	gaTest.Init()
+	
+	// build a basic GA query, replace your ga ID
+	testRequest := gadata.GaRequest{
+	    	"ga:43047246", // GA id
+		"2014-01-01",  // start date
+		"2014-01-02",  // end date 
+		"ga:visits",   // metrics 
+		"ga:day",      // dimensions
+	 	"",            // filters
+	 	"",            // segments
+	 	"",            // sort
+	 	100,		// results no.
+	 	5,		// attempts
+	}           	
     
-    // build a basic GA query, replace your ga ID
-    testRequest := GaRequest{"ga:43047246", // GA id
-		                         "2014-01-01",  // start date
-		                         "2014-01-02",  // end date 
-		                         "ga:visits",   // metrics 
-		                         "ga:day",      // dimensions
-		                         "",            // filters
-		                         "",            // segments
-		                         "",            // sort
-		                         100}           // results no.
-    
-    // launch data
-		result := gaTemp.GetData(1, &testRequest)
-		fmt.Printf("results: %s\n", result)
-	}
+    	// launch data
+	result := gaTest.GetData(1, &testRequest)
+	fmt.Printf("results: %s\n", result)
 }
 ```
 
