@@ -17,15 +17,14 @@ Place the client_secret.json in the root of your application.
 
 Example single request flow:
 
-```
-go
+```go
 import (
     "fmt"
-    "github.com/vly/go-gadata"
+    "github.com/vly/go-ga-reporting"
 )
 
 func main() {
-	// initialise GAData
+    // initialise GAData
     gaTest := new(GAData)
 	
 		// initialise instance incl. authentication
@@ -52,15 +51,14 @@ func main() {
 Example multiple requests flow. 
 Returns a sorted slice (array) of results...
 
-```
-go
+```go
 import (
     "fmt"
-    "github.com/vly/go-gadata"
+    "github.com/vly/go-ga-reporting"
 )
 
 func main() {
-	// initialise GAData
+    // initialise GAData
     gaTest := new(gadata.GAData)
 	
 		// initialise instance incl. authentication
@@ -90,6 +88,8 @@ func main() {
 Unit tests are included with this library, use `go test ./...` to run through the set provided. 
 
 ### Changelog
+#### 0.1.2:
+- Fix broken import
 #### 0.1.1:
 - Implemented batch processing
 - New request period segmentation functionality

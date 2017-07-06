@@ -4,7 +4,7 @@ import (
 	"encoding/csv"
 	"encoding/json"
 	"fmt"
-	"github.com/vly/go-gadata"
+	"github.com/vly/go-ga-reporting"
 	"io"
 	"log"
 	"os"
