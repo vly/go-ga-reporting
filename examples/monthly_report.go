@@ -2,7 +2,7 @@ package main
 
 import (
 	"encoding/json"
-	"github.com/vly/go-gadata"
+	"github.com/vly/go-ga-reporting"
 	"log"
 	"strconv"
 )
